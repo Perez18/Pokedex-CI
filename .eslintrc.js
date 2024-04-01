@@ -7,8 +7,7 @@ module.exports = {
   },
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended",
-    "standard"
+    "plugin:react/recommended"
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -23,12 +22,9 @@ module.exports = {
   "rules": {
     "indent": [
       "error",
-        2
-      ],
-    "linebreak-style": [
-      "error",
-      "unix"
+      2
     ],
+    "linebreak-style": 0,
     "quotes": [
       "error",
       "single"
