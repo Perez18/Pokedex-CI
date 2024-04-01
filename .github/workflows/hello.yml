@@ -6,10 +6,12 @@ on:
       - main
 
 jobs:
-  hello_word:
+  hello_world:
     runs-on: ubuntu-18.04
     steps:
       - name: Echo the message
         run: |
-          echo "Hola Anthony"
-          
+          echo "Hola midu!"
+      - name: Dime la fecha
+        run: date
+      - run: ls -l
