@@ -2,19 +2,25 @@ name: Deployment pipeline
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
+  pull_request:
+      branches: [main]
+      types: [opened,synchronize]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name : Cancel previous redundant builds
+        uses: styfle/cancel-workflow-action@0.9.1
+        with:
+          access_token: ${{ github.token }}
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
-          node-version: 14
+          node-version: 14 
       - name: Install dependencies
         run: npm install --no-audit --no-fund --no-optional
       - name: Lint

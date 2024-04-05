@@ -1,6 +1,6 @@
 {
   "name": "fullstackopen-cicd",
-  "version": "1.0.4",
+  "version": "1.0.10",
   "description": "Full Stack Open",
   "engines": {
     "node": ">=14.16.0"
